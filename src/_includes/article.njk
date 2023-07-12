@@ -1,0 +1,19 @@
+---
+layout : "base.njk"
+---
+<div class="min-vh-100 pt-5" style="background-color : #d0ffd6;">
+<article class="container">
+    <div class="row">
+    <div class="col-8">
+        <div class="mx-auto">
+            <img src="{{ image }}" alt="hello" class="rounded img-fluid">
+        </div>
+        <div class="position-relative rounded px-1 mx-2 z-3" style="margin-top : -3rem; background-color : white;">
+            <h1>{{ title }}</h1>
+            {{ content | safe}}
+        </div>
+    </div>
+    <div class="col-4 bg-secondary">Ad</div>
+    </div>
+</article>
+</div>

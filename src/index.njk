@@ -2,46 +2,74 @@
 title: Home
 layout: 'base.njk'
 ---
-<h1>{{ title }}</h1>
-<section>
-    <h2>Give Advice, Get Advice, Anadvi!</h2>
-    <p>
-        Anadavi is a platform currently being developed that will allow you to anonymously ask for and give advice.
-        If you are interested in following our development, signup with your E-mail below.
-    </p>
-    <button>Sign Up</button>
-</section>
-<section>
-    <div>
-        <h3>Get Advice</h3>
-        <p>
-         We are building a platform that you can come to any time you need advice on any number of topics. 
-         Not many other platforms provide good environments that are conducive to receiving good advice. 
-         Most people who turn to the internet for advice often can’t receive the needed advice offline. 
-         Providing a platform will help them get the advice that the are looking for and the help that they need.
-        </p>
-    </div>
-    <div>
-        <h3>Give Advice</h3>
-        <p>
-            Good advice comes from people who already have experience in dealing with the topics that are being asked about.
-            The internet is the perfect place to accumulate all of that experience and put it on a platform.
-            Our goal is to build that platform where people with experience can come and help others seeking advice.
-        </p>
-    </div>
-    <div>
-        <h3>Anonymously</h3>
-        <p>
-            We are pursuing an anonymous platform because we have notice that people are more forthcoming about the advice they 
-            are looking for if their accounts are not associated with them personally. 
-            Sometimes people need advice on issues that can be very embarrassing. 
-            Staying anonymous allows for the person asking for advice to provide more context,
-             which would allow them to get the help they need.
-        </p>
-    </div>
 
+<h1 class="d-none">{{ title }}</h1>
+<section style="background-color: #96f550; height: 80vh;" class="d-flex" >
+    <div class="container my-auto">
+        <div class="text-center">
+            <h2>Give Advice, Get Advice, Anadvi!</h2>
+            <p>
+                Anadavi is a platform currently being developed that will allow you to anonymously ask for and give
+                advice.
+                If you are interested in following our development, signup with your E-mail below.
+            </p>
+            <button type="button" class="btn btn-outline-secondary">Coming Soon!</button>
+        </div>
+    </div>
 </section>
-<section>
-    <h2>Blog</h2>
-    
+<section style="background-color: #96f550;">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col">
+                <h3 class="text-center">Get Advice</h3>
+                <p>
+                    We are building a platform that you can come to any time you need advice on any number of topics.
+                    Not many other platforms provide good environments that are conducive to receiving good advice.
+                    Most people who turn to the internet for advice often can’t receive the needed advice offline.
+                    Providing a platform will help them get the advice that the are looking for and the help that they
+                    need.
+                </p>
+            </div>
+            <div class="col">
+                <h3 class="text-center">Give Advice</h3>
+                <p>
+                    Good advice comes from people who already have experience in dealing with the topics that are being
+                    asked about.
+                    The internet is the perfect place to accumulate all of that experience and put it on a platform.
+                    Our goal is to build that platform where people with experience can come and help others seeking
+                    advice.
+                </p>
+            </div>
+            <div class="col">
+                <h3 class="text-center">Anonymously</h3>
+                <p>
+                    We are pursuing an anonymous platform because we have notice that people are more forthcoming about
+                    the advice they
+                    are looking for if their accounts are not associated with them personally.
+                    Sometimes people need advice on issues that can be very embarrassing.
+                    Staying anonymous allows for the person asking for advice to provide more context,
+                    which would allow them to get the help they need.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section  class="py-4" style="background-color: #d0ffd6;">
+    <div class="container text-center">
+        <h2 class="mb-3">Blog</h2>
+        <div class="row">
+            {%- for post in collections.post -%}
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ post.data.image }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.data.title }}</h5>
+                        <p class="card-text">{{ post.data.description }}</p>
+                        <a href="{{ post.url }}" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {%- endfor %}
+        </div>
+    </div>
 </section>
