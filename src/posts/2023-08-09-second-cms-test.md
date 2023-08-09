@@ -2,7 +2,7 @@
 layout: article.njk
 title: Second CMS test
 date: 2023-08-09T21:32:59.377Z
-thumbnail: https://picsum.photos/1200/800
+image: https://picsum.photos/1200/800
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
   eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus
   viverra vitae congue eu. Quis varius quam quisque id. Ipsum consequat nisl vel
