@@ -1,8 +1,8 @@
 ---
-layout: blog
+layout: article.njk
 title: First Test Article
 date: 2023-08-09T20:52:26.721Z
-thumbnail: https://picsum.photos/1200/800
+image: https://picsum.photos/1200/800
 description: >-
   <!--StartFragment-->
 
