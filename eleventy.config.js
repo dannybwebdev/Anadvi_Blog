@@ -8,6 +8,8 @@ module.exports = function(eleventyConfig) {
     "./src/admin/config.yml": "./admin/config.yml",
   });
 
+  eleventyConfig.addPassthroughCopy("**/*.jpg");
+
     // Return your Object options:
     return {
       dir: {

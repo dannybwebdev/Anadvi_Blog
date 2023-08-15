@@ -18,12 +18,14 @@ layout: 'base.njk'
         </div>
     </div>
 </section>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
 <section style="background-color: #96f550;">
     <div class="container py-5">
         <div class="row">
             <div class="col">
-                <span class="material-symbols-outlined">question_mark</span>
+                <span class="material-symbols-outlined fs-1" style="display: flex; justify-content: center;">question_mark</span>
                 <h3 class="text-center">Get Advice</h3>
                 <p>
                     We are building a platform that you can come to any time you need advice on any number of topics. Not many other
@@ -33,7 +35,7 @@ layout: 'base.njk'
                 </p>
             </div>
             <div class="col">
-                <span class="material-symbols-outlined">chat_bubble</span>
+                <span class="material-symbols-outlined fs-1" style="display: flex; justify-content: center;">chat_bubble</span>
                 <h3 class="text-center">Give Advice</h3>
                 <p>
                     Good advice comes from people who already have experience in dealing with the topics that are being asked about. The
@@ -42,7 +44,9 @@ layout: 'base.njk'
                 </p>
             </div>
             <div class="col">
-                <span class="material-symbols-outlined">person</span>
+                <div>
+                    <span class="material-symbols-outlined fs-1" style="display: flex; justify-content: center;">person</span>
+                </div>
                 <h3 class="text-center">Anonymously</h3>
                 <p>
                     We are pursuing an anonymous platform because we have notice that people are more forthcoming about the advice they are
@@ -60,11 +64,16 @@ layout: 'base.njk'
         <div class="row">
             {%- for post in collections.post -%}
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card h-100" style="width: 18rem;">
                         <img src="{{ post.data.image }}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ post.data.title }}</h5>
-                                <p class="card-text">{{ post.data.description }}</p>
+                                <p
+                                    class="card-text"
+                                    style="-webkit-line-clamp: 3;
+                                            display: -webkit-box;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;">{{ post.data.description }}</p>
                                 <a href="{{ post.url }}" class="btn btn-primary">Read More</a>
                             </div>
                         </div>
